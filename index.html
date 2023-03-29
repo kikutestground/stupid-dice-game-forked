@@ -23,12 +23,13 @@
     <section id="diceSection" class="dice-section">
         <div class="card-container">
             <div class="input-container">
-                <i class="icon fa-regular fa-circle-check"></i>
-                <input class="input-box" id="player1" type="text">
-                <label class="player-1" for="player1">Player 1</label>
+                <i onclick="pushPlayer1()" class="icon fa-regular fa-circle-check"></i>
+                <input onfocusout="setTransitionDelay1()" id="player1Input" class="input-box" type="text" maxlength="10" value="" required="" placeholder="">
+                <label class="player-1" for="player1Input">Player 1</label>
+                <label class="float-name" for="player1Input">&nbsp;<span style="transition-delay: 0ms;">N</span><span style="transition-delay: 100ms;">a</span><span style="transition-delay: 200ms;">m</span><span style="transition-delay: 300ms;">e</span></label>
             </div>
             <div class="player-container">
-                <p id="player12Text" class="player12-text">Player 1</p>
+                <p id="player1Name" class="player12-text">Player 1</p>
                 <img class="img1" src="./images/dice6.png">
             </div>
         </div>
@@ -37,12 +38,13 @@
 
         <div class="card-container">
             <div class="input-container">
-                <i class="icon fa-regular fa-circle-check"></i>
-                <input class="input-box" id="player2" type="text">
-                <label class="player-2" for="player2">Player 2</label>
+                <i onclick="pushPlayer2()" class="icon fa-regular fa-circle-check"></i>
+                <input onfocusout="setTransitionDelay2()" id="player2Input" class="input-box" type="text" maxlength="10" value="" required="" placeholder="">
+                <label class="player-2" for="player2Input">Player 2</label>
+                <label class="float-name" for="player2Input">&nbsp;<span style="transition-delay: 0ms;">N</span><span style="transition-delay: 100ms;">a</span><span style="transition-delay: 200ms;">m</span><span style="transition-delay: 300ms;">e</span></label>
             </div>
             <div class="player-container">
-                <p id="player12Text" class="player12-text">Player 2</p>
+                <p id="player2Name" class="player12-text">Player 2</p>
                 <img class="img2" src="./images/dice6.png">
             </div>
         </div>
