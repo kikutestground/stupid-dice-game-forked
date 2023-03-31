@@ -19,25 +19,39 @@ function clearTimeOuts()
 function pushPlayer1()
 {
     //Get name from input field
-    let player1Name =  $("#player1Input").val();
+    let player1Name =  $("#player1Input").val().trim();
 
     //Validate and push names
     if(player1Name != "")
     {
-        $("#player1Name").text(player1Name);
-        $("#player1Input").val("");
+        if(player1Name.length <= 10)
+        {
+            $("#player1Name").text(player1Name);
+            $("#player1Input").val("");
+        }
+        else
+        {
+            $("#player1Input").val("");
+        }
     }
 }
 function pushPlayer2()
 {
     //Get name from input field
-    let player2Name = $("#player2Input").val();
+    let player2Name = $("#player2Input").val().trim();
 
     //Validate and push names
     if(player2Name != "")
     {
-        $("#player2Name").text(player2Name);
-        $("#player2Input").val("");
+        if(player2Name.length <= 10)
+        {
+            $("#player2Name").text(player2Name);
+            $("#player2Input").val("");
+        }
+        else
+        {
+            $("#player2Input").val("");
+        }
     }
 }
 
